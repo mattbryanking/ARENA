@@ -1,6 +1,6 @@
 # ARENA
 
-A custom first-person raycasting game engine made with Python, using TES: Arena assets. Heavily extended from https://www.youtube.com/watch?v=FLc6vUwyTdM. This project adds support for ceiling rendering, multiple wall textures, custom level structures, and minor gameplay elements, along with custom implementations of sprite sorting, animation handling, sprite angle correction, collision detection, a more robust shading system, and enemy visibility detection. 
+A custom first-person raycasting game engine made with Python, using TES: Arena assets. Heavily extended from https://www.youtube.com/watch?v=4gqPv7A_YRY. This project adds support for ceiling rendering, multiple wall textures, custom level structures, and minor gameplay elements, along with custom implementations of sprite sorting, animation handling, sprite angle correction, collision detection, a more robust shading system, and enemy visibility detection. 
 
 This is a tech demo, not even close to an MVP. Most of the project is simply to explore raycasting and sprite handling. Some simple gameplay exists (attacking enemies, movement), but is not the main focus of the project.
 

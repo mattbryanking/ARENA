@@ -2,8 +2,8 @@
 # drawing the walls and floor was all from this video, as well as some movement and sprite
 # positioning, basically everything else was done by me.
 #
-# added support for ceiling rendering, multiple wall textures, sprite depth/dimming,
-# custom level structures, a semi-functional UI, and of course gameplay elements.
+# added support for ceiling rendering, multiple wall textures,
+# custom level structures, and of course gameplay elements.
 #
 # uses custom implementations of sprite sorting, animation handling, sprite angle correction,
 # collision detection, a more robust shading system, and detection to see if sprite is behind
@@ -57,6 +57,9 @@ def dungeon(screen, running, clock, h_res, v_res, name):
     # level size (size x size)
     size = 30
     
+    # for the LIFE of me I cannot figure out why, but the level array mirrors itself on both axis. Only the changes in 
+    # the upper left quadrant matter, and they're mirrored across the x and y axis. for now, i'm just making the area of 
+    # the level 4x bigger than it needs to be, and then only using the upper left quadrant.
     level = numpy.array([[0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0],
                          [0, 1, 5, 1, 1, 1, 1, 1, 1, 3, 4, 4, 3, 1, 1, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0],
                          [0, 1, 0, 3, 0, 0, 0, 1, 0, 0, 0, 0, 0, 0, 1, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0],

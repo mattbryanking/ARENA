@@ -16,7 +16,7 @@ Two options: download the script and assets and it's dependencies, or download t
 
 ### Executable
 
-This one is easy. Simply download the contents of the [Google Drive](https://drive.google.com/drive/folders/18-rA0l1d8kWjZCXsZs8lKWJoxZjno4Fm?usp=sharing) folder, and run the executable. This Google Drive folder also contains a demo video of the project. 
+This one is easy. Simply download and unzip the contents of Arena.zip in the [Google Drive](https://drive.google.com/drive/folders/18-rA0l1d8kWjZCXsZs8lKWJoxZjno4Fm?usp=sharing) folder, and run the executable. This Google Drive folder also contains a demo video of the project. 
 
 ### Script & Dependencies
 

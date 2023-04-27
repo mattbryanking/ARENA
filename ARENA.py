@@ -113,20 +113,26 @@ def dungeon(screen, running, clock, h_res, v_res, name):
     # sound stuff (but a lot of it is handled elsewhere)
     walk_sound, sword_sound, damage_sound, death_sound = get_sounds()
 
-
+    # timer for sprite animations
     last_update = pygame.time.get_ticks()
     sprite_frame = 0
     sprite_frame_dir = 0
 
+    # timer for sword animation
     last_update_sword = pygame.time.get_ticks()
     swinging = False
     sword_frame = 0
 
+    # is mouse over enemy
     over_enemy = False
 
+    # is player inside enemy
     in_enemy = False
-    last_update_damage = pygame.time.get_ticks()\
     
+    # timer for damage buffer
+    last_update_damage = pygame.time.get_ticks()
+    
+    # is alive
     alive = True
 
     # MAIN GAME LOOP!!!!
@@ -211,12 +217,14 @@ def dungeon(screen, running, clock, h_res, v_res, name):
                         sword_frame += 1
                 last_update_sword = current_time
 
+            # buffer for damage so it doesn't spam you
             if current_time - last_update_damage > 400:
                 if in_enemy and alive:
                     damage_sound.play()
                     health = pygame.rect.Rect((225, health.top + 33, 15, health.height - 32))
                 last_update_damage = current_time
 
+            # kills player
             if health.height <= 0 and alive:
                 death_sound.play()
                 alive = False
@@ -227,7 +235,6 @@ def dungeon(screen, running, clock, h_res, v_res, name):
 
             # draws enemies, checks if mouse is over enemy, handles attacked enemies, and deals player damage
             # parameter hell
-        
             over_enemy, enemies, in_enemy = draw_enemies(screen, enemies_sorted, pos_x, pos_y, rot, level, size,
                                             enemy_sprites, sprite_size, sprite_frame, next_frame,
                                             over_enemy, clicked)

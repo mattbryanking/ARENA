@@ -2,7 +2,7 @@
 
 A custom first-person raycasting game engine made with Python, using TES: Arena assets. Heavily extended from https://www.youtube.com/watch?v=4gqPv7A_YRY. This project adds support for ceiling rendering, multiple wall textures, custom level structures, and minor gameplay elements, along with custom implementations of sprite sorting, animation handling, sprite angle correction, collision detection, a more robust shading system, and enemy visibility detection. 
 
-This is a tech demo, not even close to an MVP. Most of the project is simply to explore raycasting and sprite handling. Some simple gameplay exists (attacking enemies, movement), but is not the main focus of the project.
+This is a tech demo, not a MVP. The goal of this project was simply to explore raycasting and sprite handling. Some simple gameplay elements are implemented (attacking enemies, movement), but are not the main focus of the project.
 
 ## Technology and Methodology 
 
@@ -21,8 +21,6 @@ This one is easy. Simply download and unzip the contents of Arena.zip in the [Go
 ### Script & Dependencies
 
 If you'd like to run the script in an IDE or in your command line, or if the link to the executable goes down, download the script and assets from this GitHub repo. Make sure the Assets folder and the ARENA.py script are in the same directory. Your file structure should look like this:
-
-•
 
 ├── Assets                   
 ├── ARENA.py
@@ -44,7 +42,7 @@ Numba:
 pip install numba
 ```
 
-Navigate to the directory containing the script, and (assuming you're using Python 3), run the script:
+Navigate to the directory containing the script, and (assuming you're using Python 3), run the command:
 
 ```bash
 python3 ARENA.py

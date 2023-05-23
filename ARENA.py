@@ -620,6 +620,9 @@ def draw_enemies(screen, enemies, pos_x, pos_y, rot, level, size, enemy_sprites,
                     elif true_angle > 7 * numpy.pi / 4 or true_angle < numpy.pi / 4:
                         sprite_image = enemy_sprites[1][frame]
 
+                    else:
+                        sprite_image = enemy_sprites[1][frame]
+
                 # if dead, play death animation
                 else:
                     # animation is over, delete enemy from list
@@ -686,7 +689,9 @@ def move_enemies(enemies, level, size):
                 dx, dy = -speed, 0
             elif direction == 3 * numpy.pi / 2:
                 dx, dy = 0, -speed
-         
+            else:  
+                dx, dy = 0, -speed
+                
             # checks if new position will collide with wall, or is outside level bounds
             new_x, new_y = en_x + dx, en_y + dy
             if (not 0 < new_x < size - 1 or

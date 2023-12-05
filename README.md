@@ -6,7 +6,7 @@ This is a tech demo, not a MVP. The goal of this project was simply to explore r
 
 ## Technology and Methodology 
 
-This project is made entirely with Python. No external game engines were used, and no libraries with built-in raycasting technologies were utilized. Numpy and the Numba NJIT compiler were used for performance gains and trigonometry functions. Pygame was utilized for texture loading, interactivity, sound design, and pushing frames to the screen. All 3d calculations were done solely through python.
+This project is made entirely with Python. No external game engines were used, and no libraries with built-in raycasting technologies were utilized. Numpy and the Numba NJIT compiler were used for performance gains and trigonometry functions. Pygame was utilized for texture loading, interactivity, sound design, and pushing frames to the screen. All 3D calculations were done solely through python.
 
 Raycasting is a technique to render a 3D space. Put simply, rays are cast from the player's view, and at each sample along the ray's path, the ray is checked for intersections. Once an intersection is found, that object is rendered at that pixel. This implementation uses one ray per pixel on the screen, and can draw walls, floors and ceilings, and sprites. Game data is stored in a 2D array, and rays are sent through the arrays. After each frame, the information gathered is rendered in 3D.
 
